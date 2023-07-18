@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="moment.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+    let distancia = prompt("Digite a distancia da viagem em anos luz?");
+    let formato = prompt(
+      "Para qual unidade deseja conveter?\n1. Parse(pc)\n2. Unidade Astronômica (AU)" +
+        "\n3. Quilômetros (km)\n\n(Digite o número da opção desejada)"
+    );
+    console.log(distancia);
+    console.log(formato);
+    let formatoEscolhido;
+    let distanciaConvertida;
+    switch (formato) {
+      case "1":
+        formatoEscolhido = "Parse(pc)";
+        distanciaConvertida = distancia * 0.306601;
+        break;
+      case "2":
+        formatoEscolhido = "Unidade Astronomica (AU)";
+        distanciaConvertida = distancia * 63241.1;
+        break;
+      case "3":
+        formatoEscolhido = "Quilometros (KM)";
+        distanciaConvertida = distancia * 9.5 * Math.pow(10, 12);
+        break;
+      default:
+        formatoEscolhido = "Unidade não identificada";
+        distanciaConvertida = "Conversão fora do escopo";
+    }
+
+    console.log(formatoEscolhido);
+    console.log(distanciaConvertida);
+
+    alert(
+      "Distancia em anos luz: " +
+        distancia +
+        "\n Unidade selecionada para conversão: " +
+        formatoEscolhido +
+        "\n Valor convertido: " +
+        distanciaConvertida
+    );
+  </script>
+</html>
