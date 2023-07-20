@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let nomeNave = prompt("Qual o nome da sua nave?");
+    let entradaDobra = "";
+    let dobras = 0;
+
+    entradaDobra = prompt("Deseja entrar em dobra espacial?\n1- Sim\n2- Não");
+
+    while (entradaDobra == "1") {
+      dobras += 1;
+      entradaDobra = prompt("Deseja entrar em dobra espacial?\n1- Sim\n2- Não");
+    }
+    if (entradaDobra == "2") {
+      alert("Nave: " + nomeNave + "\nQuantidade de dobras: " + dobras);
+    }
+  </script>
+</html>
